@@ -26,7 +26,7 @@ const getCountryDetails = router.get('/getCountryDetails', async (req, res) => {
       country.save();
       
     }
-    Country.insertMany(response)
+   
     res.send(response.data);
     console.log(response.data);
   } catch (error) {

@@ -4,10 +4,12 @@ dotenv.config();
 const express = require('express')
 const countryRoutes = require('./routes/country')
 const userRoutes = require('./routes/user')
+const bodyParser = require("body-parser");
 
 const app = express()
 
 app.use(express.json())
+app.use(bodyParser.json());
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
